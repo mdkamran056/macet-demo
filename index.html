@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maulana Azad College of Engineering & Technology - Premier Engineering Institution in Bihar">
+  <title>MACET - Maulana Azad College of Engineering & Technology</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Top Header Bar -->
+  <div class="parent-container">
+    <div class="red-box">LATEST NEWS 🔔</div>
+    <div class="blue-box"></div>
+  </div>
+
+  <!-- Main Header -->
+  <div class="top-header">
+    <div class="logo-container">
+      <div class="logo-box">
+        <img src="maulana-azad-main-logo.png" alt="MACET Logo">
+      </div>
+      <div>
+        <h1 class="header-text">Maulana Azad College of Engineering & Technology</h1>
+        <p class="sub-text">Affiliated to Bihar Engineering University, Govt. of Bihar</p>
+        <p class="sub-text">Approved by AICTE, New Delhi, Govt. of India</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" aria-label="Home"><i class="fa fa-home"></i></a></li>
+        <li>
+          <a href="#about">About ▾</a>
+          <ul class="dropdown">
+            <li><a href="#about">About College</a></li>
+            <li><a href="#vision">Vision & Mission</a></li>
+            <li><a href="#administration">College Administration</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#departments">Departments ▾</a>
+          <ul class="dropdown">
+            <li><a href="#cse">Computer Science & Engineering</a></li>
+            <li><a href="#cse-ai">CSE (AI & ML)</a></li>
+            <li><a href="#cse-ds">CSE (Data Science)</a></li>
+            <li><a href="#civil">Civil Engineering</a></li>
+            <li><a href="#mech">Mechanical Engineering</a></li>
+            <li><a href="#eee">Electrical & Electronics Engineering</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#facilities">Facilities ▾</a>
+          <ul class="dropdown">
+            <li><a href="#library">Central Library</a></li>
+            <li><a href="#sports">Sports</a></li>
+            <li><a href="#transport">Transport</a></li>
+            <li><a href="#labs">Laboratories</a></li>
+            <li><a href="#canteen">Canteen</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#admissions">Admissions ▾</a>
+          <ul class="dropdown">
+            <li><a href="#btech-admission">B.Tech Admission</a></li>
+            <li><a href="#diploma-admission">Diploma Admission</a></li>
+            <li><a href="#eligibility">Eligibility</a></li>
+            <li><a href="#fee">Fee Structure</a></li>
+          </ul>
+        </li>
+        <li><a href="#placement">Placement</a></li>
+        <li><a href="#news">News & Events</a></li>
+        <li><a href="#iqac">IQAC</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <a href="#enquiry" class="enquiry-btn">ENQUIRY NOW</a>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <!-- <div class="banner-image">
+    <img src="macet-banner.webp" alt="MACET Campus Banner" width="100%">
+  </div> -->
+
+  <!-- ========================================
+     BANNER SLIDER HTML
+     
+     ======================================== -->
+
+<!-- Banner Slider -->
+<div class="banner-slider">
+  <div class="slides-container" id="slidesContainer">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="macet-banner.webp" alt="MACET Campus">
+      <div class="slide-overlay">
+        <!-- <h2>MACET</h2> -->
+        <h2>Welcome to MACET</h2>
+        <p>Leading Engineering Institution in Bihar</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="banner2.webp" alt="MACET Infrastructure">
+      <div class="slide-overlay">
+        <h2>State-of-the-Art Infrastructure</h2>
+        <p>Modern laboratories and world-class facilities</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="banner3.webp" alt="MACET Events">
+      <div class="slide-overlay">
+        <h2>Vibrant Campus Life</h2>
+        <p>Events, workshops and cultural activities</p>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+      <img src="banner4.webp" alt="MACET Students">
+      <div class="slide-overlay">
+        <h2>Excellence in Education</h2>
+        <p>Shaping future engineers and innovators</p>
+      </div>
+    </div>
+
+    <!-- Add more slides as needed -->
+    
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button class="slider-nav prev" onclick="changeSlide(-1)" aria-label="Previous Slide">❮</button>
+  <button class="slider-nav next" onclick="changeSlide(1)" aria-label="Next Slide">❯</button>
+
+  <!-- Dots Navigation -->
+  <div class="slider-dots" id="dotsContainer"></div>
+</div>
+
+  <!-- About Section -->
+  <section class="content-section" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="campus.webp" alt="MACET Campus">
+        </div>
+        <div class="about-text">
+          <h2>Welcome To MACET</h2>
+          <p><strong>Maulana Azad College of Engineering and Technology is imparting Diploma and Under Graduate (UG)
+              level Technical Education in Engineering & Technology Program.</strong></p>
+          <p>The <strong>"Maulana Azad College of Engineering & Technology"</strong> was started in the year 1987 under
+            the Millat Education Society. This was the first technical self-financed minority institution in the entire
+            northern India.</p>
+          <p>MACET was set up keeping in view the rapid technological growth and changes taking place in the industry.
+            The college has a sprawling campus and state-of-the-art laboratories. The students at MACET have the best of
+            facilities, a conducive environment for studies and a dedicated faculty to guide them and lead them to
+            success.</p>
+          <a href="#about-more" class="read-more-link">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approval Section -->
+  <section class="approval-section">
+    <div class="approval-container">
+      <div class="approval-card">
+        <div class="approval-logo">
+          <img src="AICTE.jpg.jpeg" alt="AICTE Approval">
+        </div>
+        <h4>AICTE</h4>
+      </div>
+
+      <div class="approval-card">
+        <div class="approval-logo">
+          <img src="SBTE.jpg.jpeg" alt="SBTE Approval">
+        </div>
+        <h4>SBTE</h4>
+      </div>
+
+      <div class="approval-card">
+        <div class="approval-logo">
+          <img src="BEU.jpg.jpeg" alt="BEU Affiliation">
+        </div>
+        <h4>BEU</h4>
+      </div>
+
+      <div class="approval-card">
+        <div class="approval-logo">
+          <img src="aishe.jpg.jpeg" alt="AISHE Registration">
+        </div>
+        <h4>AISHE (C-43572)</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Messages Section -->
+  <section class="messages-section">
+    <div class="messages-container">
+      <h2 class="section-title">From the Desk of ...</h2>
+
+      <div class="messages-grid">
+        <!-- President Card -->
+        <div class="message-card">
+          <div class="message-image">
+            <img src="president (1).webp" alt="Dr. Ahmad Abdul Hai - President">
+          </div>
+          <div class="message-content">
+            <h5>President</h5>
+            <h3>Dr. Ahmad Abdul Hai</h3>
+            <a href="#president-message" class="view-message-btn">View Message</a>
+          </div>
+        </div>
+
+        <!-- Vice President Card -->
+        <div class="message-card">
+          <div class="message-image">
+            <img src="Vice_Presedent (1).webp" alt="Mr. Syed Shafiuzzaman Mashhadi - Vice President">
+          </div>
+          <div class="message-content">
+            <h5>Vice President</h5>
+            <h3>Mr. Syed Shafiuzzaman Mashhadi</h3>
+            <a href="#vp-message" class="view-message-btn">View Message</a>
+          </div>
+        </div>
+
+        <!-- Director Card -->
+        <div class="message-card">
+          <div class="message-image">
+            <img src="https://macet.ac.in/assets/images/message/Dr-Asim-Kumar.jpg" alt="Prof. (Dr.) Asim Kumar - Director">
+          </div>
+          <div class="message-content">
+            <h5>Director</h5>
+            <h3>Prof. (Dr.) Asim Kumar</h3>
+            <a href="#director-message" class="view-message-btn">View Message</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission and Vision Section -->
+  <section class="mission-vision" id="vision">
+    <div class="container">
+      <h1>Mission and Vision</h1>
+      <div class="mv-content">
+        <div class="mv-card">
+          <h3>
+            <span class="mv-icon">🎯</span>
+            Mission
+          </h3>
+          <ul>
+            <li>
+              <p>To foster scientific and technical temperament among the under privilege section of society
+                particularly among the minorities, taking inspiration from Holy Book Quran, "Read : Thy Lord is the most bounteous
+                (Quran 30: 96:3)".</p>
+            </li>
+            <li>
+              <p>Inculcating in students a respect for fellow human beings and responsibility towards the society.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="mv-card">
+          <h3>
+            <span class="mv-icon">👁️</span>
+            Vision
+          </h3>
+          <ul>
+            <li>
+              <p>To impart innovative and interactive learning process to target multifaceted personality development.</p>
+            </li>
+            <li>
+              <p>To integrate spiritual and moral values with education and to develop human potential to its ability.</p>
+            </li>
+            <li>
+              <p>To prepare students from diverse backgrounds to have aptitude for research and spirit of professionalism.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glance of Maulana Azad Day -->
+  <section class="glance-section" id="gallery">
+    <div class="container">
+      <h1>Glance of Maulana Azad Day</h1>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="1.webp" alt="Maulana Azad Day Celebration 1">
+        </div>
+        <div class="gallery-item">
+          <img src="2.webp" alt="Maulana Azad Day Celebration 2">
+        </div>
+        <div class="gallery-item">
+          <img src="3.webp" alt="Maulana Azad Day Celebration 3">
+        </div>
+        <div class="gallery-item">
+          <img src="4.webp" alt="Maulana Azad Day Celebration 4">
+        </div>
+        <div class="gallery-item">
+          <img src="glance-image-5.webp" alt="Maulana Azad Day Celebration 5">
+        </div>
+        <div class="gallery-item">
+          <img src="glance-image6.webp" alt="Maulana Azad Day Celebration 6">
+        </div>
+      </div>
+      <div class="view-more">
+        <a href="#gallery-more" class="view-more-link">View More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruiters Section -->
+  <section class="recruiters">
+    <div class="container1">
+      <h1>Our Esteemed Recruiters</h1>
+    </div>
+    <div class="logos-slider">
+      <div class="logo-item"><img src="hcl.png" alt="HCL Logo"></div>
+      <div class="logo-item"><img src="infosys.png" alt="Infosys Logo"></div>
+      <div class="logo-item"><img src="lti.png" alt="LTI Logo"></div>
+      <div class="logo-item"><img src="oracle.png" alt="Oracle Logo"></div>
+      <div class="logo-item"><img src="siemens.png" alt="Siemens Logo"></div>
+      <div class="logo-item"><img src="tcs.png" alt="TCS Logo"></div>
+    </div>
+  </section>
+
+  <!-- From Campus To Corporate -->
+  <section class="campus-corporate">
+    <div class="container2">
+      <h1>From Campus To Corporate</h1>
+    </div>
+    <div class="students-grid">
+      <div class="student-card">
+        <div class="student-img">
+          <img src="Anim.webp" alt="Anam Sajid">
+        </div>
+        <h4>Anam Sajid</h4>
+        <p>CSE | 2017</p>
+        <p class="company">Capgemini</p>
+      </div>
+
+      <div class="student-card">
+        <div class="student-img">
+          <img src="zainab.webp" alt="Zainab Ashraf">
+        </div>
+        <h4>Zainab Ashraf</h4>
+        <p>CSE | 2018</p>
+        <p class="company">HCL</p>
+      </div>
+
+      <div class="student-card">
+        <div class="student-img">
+          <img src="Ashan.webp" alt="Ahsan Raza">
+        </div>
+        <h4>Ahsan Raza</h4>
+        <p>CSE | 2018</p>
+        <p class="company">HCL</p>
+      </div>
+
+      <div class="student-card">
+        <div class="student-img">
+          <img src="FauziaReh.webp" alt="Fauzia Rahman">
+        </div>
+        <h4>Fauzia Rahman</h4>
+        <p>CSE | 2016</p>
+        <p class="company">IBM</p>
+      </div>
+
+      <div class="student-card">
+        <div class="student-img">
+          <img src="Saista.webp" alt="Shaista Perveen">
+        </div>
+        <h4>Shaista Perveen</h4>
+        <p>CSE | 2016</p>
+        <p class="company">Capgemini</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h5>Contact</h5>
+        <h6>Campus :</h6>
+        <div class="contact-item">
+          <p>Maulana Azad College of Engg. & Technology<br>
+          Gorhna, Neoraganj, Neora, Patna – 801113, Bihar</p>
+          <p><a href="mailto:contact@macet.ac.in">contact@macet.ac.in</a></p>
+          <p><a href="tel:+919835405784">+91-9835405784</a>, <a href="tel:+917004874889">+91-7004874889</a></p>
+        </div>
+        <h6>City Office :</h6>
+        <div class="contact-item">
+          <p>Maulana Azad College of Engineering & Technology<br>
+          Marium Manzil, Anisabad, Patna, Bihar - 800002</p>
+          <p><a href="mailto:contact@macet.ac.in">contact@macet.ac.in</a></p>
+          <p><a href="tel:+916122254569">+91-612-2254569</a>, <a href="tel:+919431049755">+91-9431049755</a>, <a href="tel:+916122250348">+91-612-2250348</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h5>Know Us</h5>
+        <ul>
+          <li><a href="#director">Director desk</a></li>
+          <li><a href="#president">President desk</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#holidays">Holidays of MACET</a></li>
+          <li><a href="#admin">Admin</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h5>Committees & Cell</h5>
+        <ul>
+          <li><a href="#women-cell">Women Cell</a></li>
+          <li><a href="#anti-ragging">Anti-Ragging Cell</a></li>
+          <li><a href="#proctor">Proctor Cell</a></li>
+          <li><a href="#sc-st">SC/ST Cell</a></li>
+          <li><a href="#icc">Internal Complaint Cell</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h5>Other links</h5>
+        <ul>
+          <li><a href="https://www.aicte-india.org/" target="_blank" rel="noopener">AICTE</a></li>
+          <li><a href="#aku">AKU</a></li>
+          <li><a href="https://beu.ac.in/" target="_blank" rel="noopener">BEU</a></li>
+          <li><a href="#sbte">SBTE</a></li>
+          <li><a href="https://nptel.ac.in/" target="_blank" rel="noopener">NPTEL</a></li>
+          <li><a href="#naac">NAAC</a></li>
+          <li><a href="#alumni">Alumni</a></li>
+          <li><a href="#credit-card">Student Credit Card</a></li>
+          <li><a href="#scholarship">MOMA Scholarship</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2026 <a href="#home">MACET</a>. All Rights Reserved. Powered by: AK-PROJECT - 🌍<b> ASAD AZHAR & MD KAMRAN</b></p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
